@@ -4,11 +4,11 @@ public:
         if (x < 0 || (x % 10 == 0 && x != 0)) 
             return false;
 
-        long reversed = 0, temp = x;
-        while (temp > 0) {
-            reversed = reversed * 10 + temp % 10;
-            temp /= 10;
+        int reversedHalf = 0;
+        while (x > reversedHalf) {
+            reversedHalf = reversedHalf * 10 + x % 10;
+            x /= 10;
         }
-        return reversed == x;
+        return (x == reversedHalf || x == reversedHalf / 10);
     }
 };
