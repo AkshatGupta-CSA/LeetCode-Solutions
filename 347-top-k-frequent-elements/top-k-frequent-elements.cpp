@@ -7,7 +7,7 @@ public:
         freq[num]++;
       }
       vector<pair<int,int>>v;
-      for(auto &it:freq)
+      for(auto it:freq)
       {
         v.push_back({it.second,it.first});
       }  
